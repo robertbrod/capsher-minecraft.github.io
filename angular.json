@@ -68,7 +68,7 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "https://robertbrod.github.io/capsher-minecraft/",
+            "baseHref": "/capsher-minecraft/",
             "name": "Capsher Minecraft",
             "email": "rbrod93@gmail.com"
           }
