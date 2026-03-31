@@ -1,14 +1,13 @@
-<mat-sidenav-container class="home-sidenav">
-    <mat-sidenav mode="side" opened>
-        <mat-nav-list>
-            <!-- Dashboard Navigation -->
-            <a mat-list-item [routerLink]="['/setup']">
-                <mat-icon matListItemIcon>build_circle</mat-icon>
-                <span matListItemTitle>Setup</span>
-            </a>
-        </mat-nav-list>
-    </mat-sidenav>
-    <mat-sidenav-content>
-        <router-outlet />
-    </mat-sidenav-content>
-</mat-sidenav-container>
+<mat-card class="card">
+  <mat-card-content>
+    <h1>Welcome to CAPSHER Minecraft!</h1>
+    <p>
+      We are currently playing GregTech: New Horizons, self-advertised as a "hardcore, content rich
+      and meticulously crafted technical modpack". This modpack is on Minecraft version 1.7.10.
+    </p>
+    <p>Please visit the "Setup" page to get started!</p>
+    <a href="https://discord.gg/jMY8WdGB" target="_blank">
+      <button matButton><mat-icon>chat</mat-icon> Join the Discord!</button>
+    </a>
+  </mat-card-content>
+</mat-card>

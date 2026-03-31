@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { RouterOutlet, RouterLink } from '@angular/router';
-import { MatListModule } from '@angular/material/list';
+import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-home',
-  imports: [MatIconModule, RouterOutlet, MatSidenavModule, MatListModule, RouterLink],
+  imports: [MatButtonModule, MatCardModule, MatIconModule],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })

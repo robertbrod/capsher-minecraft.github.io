@@ -1,7 +1,11 @@
 <mat-toolbar>
-  <span>Capsher Minecraft</span>
+  <span>CAPSHER Minecraft</span>
   <span class="spacer"></span>
-  <button matIconButton class="toolbar-icon">
-    <mat-icon>computer</mat-icon>
+  <button
+    matButton
+    cdkCopyToClipboard="51.79.11.172:25599"
+    (cdkCopyToClipboardCopied)="copySuccess()"
+  >
+    <mat-icon>content_copy</mat-icon>Server IP
   </button>
 </mat-toolbar>

@@ -5,10 +5,18 @@ import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ClipboardModule } from '@angular/cdk/clipboard';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-setup',
-  imports: [ClipboardModule, MatIconModule, MatListModule, MatStepperModule, MatButtonModule],
+  imports: [
+    MatCardModule,
+    ClipboardModule,
+    MatIconModule,
+    MatListModule,
+    MatStepperModule,
+    MatButtonModule,
+  ],
   templateUrl: './setup.html',
   styleUrl: './setup.scss',
 })

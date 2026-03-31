@@ -9,5 +9,5 @@ import { Toolbar } from './toolbar/toolbar';
   styleUrl: './app.scss',
 })
 export class App {
-  protected readonly title = signal('capsher-minecraft');
+  protected readonly title = signal('CAPSHER-minecraft');
 }

@@ -1,95 +1,91 @@
-<mat-stepper linear #stepper>
-  <mat-step>
-    <ng-template matStepLabel>Prism and Java</ng-template>
-    <div class="step-content-container">
-      <mat-list role="list">
-        <mat-list-item role="listitem">
-          <span matListItemTitle>Install Prism</span>
-          <span matListItemLine
-            ><a href="https://prismlauncher.org/">Install the Prism Launcher</a></span
+<mat-card class="card">
+  <mat-card-content>
+    <mat-stepper linear #stepper>
+      <mat-step>
+        <ng-template matStepLabel>Prism and Java</ng-template>
+        <div class="step-content-container">
+          <mat-list>
+            <mat-list-item>
+              <span matListItemTitle>Install Prism</span>
+              <span matListItemLine>
+                <a href="https://prismlauncher.org/">Install the Prism Launcher</a>
+              </span>
+            </mat-list-item>
+            <mat-list-item>
+              <span matListItemTitle>Install Java 25</span>
+              <span matListItemLine>
+                <a href="https://adoptium.net/">Install the JDK 25 (LTS) via Adoptium</a>
+              </span>
+              <span matListItemLine class="hint">
+                Ensure "Add to PATH" is checked during installation.
+              </span>
+            </mat-list-item>
+          </mat-list>
+          <p>
+            It is highly recommended to use the Prism Launcher and Java 25. Prism is highly
+            configurable and does not require additional Java arguments. Java 25 is optimized and
+            less memory intensive for GTNH.
+          </p>
+        </div>
+        <div class="flex">
+          <span class="spacer"></span>
+          <button matButton matStepperNext>Next</button>
+        </div>
+      </mat-step>
+
+      <mat-step>
+        <ng-template matStepLabel>Import the Instance</ng-template>
+        <div class="step-content-container">
+          <mat-list>
+            <mat-list-item>
+              <span matListItemTitle>Install GT:NH</span>
+              <span matListItemLine>
+                <a href="https://www.gtnewhorizons.com/downloads/">Download the GT:NH Prism ZIP</a>
+              </span>
+            </mat-list-item>
+            <mat-list-item>
+              <span matListItemTitle>Import the Instance</span>
+              <span matListItemLine>Drag the ZIP file directly into the Prism window</span>
+            </mat-list-item>
+          </mat-list>
+          <p>
+            <strong>** Client version MUST match the server (v2.8.4). **</strong>
+          </p>
+        </div>
+        <div class="flex">
+          <button matButton matStepperPrevious>Back</button>
+          <span class="spacer"></span>
+          <button matButton matStepperNext>Next</button>
+        </div>
+      </mat-step>
+
+      <mat-step>
+        <ng-template matStepLabel>Setup and Join!</ng-template>
+        <div class="step-content-container">
+          <mat-list>
+            <mat-list-item>
+              <span matListItemTitle>Setup</span>
+              <span matListItemLine>Right-click > Edit > Settings > Java</span>
+              <span matListItemLine> Set memory to 8GB and auto-detect Java 25 path </span>
+            </mat-list-item>
+            <mat-list-item>
+              <span matListItemTitle>Join the Server!</span>
+              <span matListItemLine>Launch instance and enter the server IP</span>
+            </mat-list-item>
+          </mat-list>
+          <button
+            matButton
+            cdkCopyToClipboard="51.79.11.172:25599"
+            (cdkCopyToClipboardCopied)="copySuccess()"
           >
-        </mat-list-item>
-        <mat-list-item role="listitem">
-          <span matListItemTitle>Install Java 25</span>
-          <span matListItemLine
-            ><a href="https://adoptium.net/"
-              >Install the the JDK 25 (LTS) via Adoptium (Temurin)</a
-            ></span
-          >
-          <span matListItemLine>During installation, ensure "Add to PATH" is checked</span>
-        </mat-list-item>
-      </mat-list>
-      <p>
-        It is highly recommended to use the Prism Launcher and Java 25 over everything else. Not
-        only is Prism extremely easy to use for installing/migrating, but it is highly configurable
-        and does not require any additional Java arguments to run. Java 25 is the best because it is
-        the most optimized and least memory intensive version that can run GTNH.
-      </p>
-    </div>
-    <div class="flex">
-      <span class="spacer"></span>
-      <button matButton matStepperNext>Next</button>
-    </div>
-  </mat-step>
-  <mat-step>
-    <ng-template matStepLabel>Import the Instance</ng-template>
-    <div class="step-content-container">
-      <mat-list role="list">
-        <mat-list-item role="listitem">
-          <span matListItemTitle>Install GT:NH</span>
-          <span matListItemLine
-            ><a href="https://www.gtnewhorizons.com/downloads/"
-              >Download the GT:NH Prism ZIP</a
-            ></span
-          >
-        </mat-list-item>
-        <mat-list-item role="listitem">
-          <span matListItemTitle>Import the Instance</span>
-          <span matListItemLine
-            >Open Prism Launcher and drag the ZIP file directly into the window</span
-          >
-        </mat-list-item>
-      </mat-list>
-      <p>
-        <strong>
-          ** We are currently on version 2.8.4. You're client version of GT:NH MUST match the server
-          version. **
-        </strong>
-      </p>
-    </div>
-    <div class="flex">
-      <button matButton matStepperPrevious>Back</button>
-      <span class="spacer"></span>
-      <button matButton matStepperNext>Next</button>
-    </div>
-  </mat-step>
-  <mat-step>
-    <ng-template matStepLabel>Setup and Join!</ng-template>
-    <div class="step-content-container">
-      <mat-list role="list">
-        <mat-list-item role="listitem">
-          <span matListItemTitle>Setup</span>
-          <span matListItemLine>Right-click the instance > Edit > Settings > Java</span>
-          <span matListItemLine>Set both minimum and maximum memory to 8GB</span>
-          <span matListItemLine>Click auto-detect on Java path and select Java 25</span>
-        </mat-list-item>
-        <mat-list-item role="listitem">
-          <span matListItemTitle>Join the Server!</span>
-          <span matListItemLine>Launch the instance</span>
-          <span matListItemLine>Enter the server IP into the multiplayer screen</span>
-        </mat-list-item>
-      </mat-list>
-      <button
-        matButton
-        cdkCopyToClipboard="51.79.11.172:25599"
-        (cdkCopyToClipboardCopied)="copySuccess()"
-      >
-        <mat-icon>content_copy</mat-icon>Server IP
-      </button>
-    </div>
-    <div class="flex">
-      <button matButton matStepperPrevious>Back</button>
-      <span class="spacer"></span>
-    </div>
-  </mat-step>
-</mat-stepper>
+            <mat-icon>content_copy</mat-icon> Copy Server IP
+          </button>
+        </div>
+        <div class="flex">
+          <button matButton matStepperPrevious>Back</button>
+          <span class="spacer"></span>
+        </div>
+      </mat-step>
+    </mat-stepper>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,20 @@
+<mat-sidenav-container class="sidenav page-content">
+  <mat-sidenav mode="side" opened>
+    <mat-nav-list>
+      <!-- Home Navigation -->
+      <a mat-list-item [routerLink]="['/home']">
+        <mat-icon matListItemIcon>chat</mat-icon>
+        <span matListItemTitle>Discord</span>
+      </a>
+
+      <!-- Dashboard Navigation -->
+      <a mat-list-item [routerLink]="['/setup']">
+        <mat-icon matListItemIcon>build_circle</mat-icon>
+        <span matListItemTitle>Setup</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet />
+  </mat-sidenav-content>
+</mat-sidenav-container>
