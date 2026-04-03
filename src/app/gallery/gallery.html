@@ -2,5 +2,10 @@
   <mat-card-content>
     <app-carousel [images]="projectImages" [autoPlay]="false" />
     <p>Send me an image on Discord to get it added to the gallery!</p>
+    <div class="mobile-img-container">
+      @for (image of projectImages; track $index) {
+        <img [src]="image" loading="lazy" />
+      }
+    </div>
   </mat-card-content>
 </mat-card>
