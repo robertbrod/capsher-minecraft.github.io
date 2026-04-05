@@ -13,8 +13,14 @@ import { MatButtonModule } from '@angular/material/button';
 })
 export class Toolbar {
   constructor(private snackBar: MatSnackBar) {}
-  copySuccess() {
+  serverIpCopySuccess() {
     this.snackBar.open('Server IP copied to clipboard!', 'Close', {
+      duration: 2000,
+    });
+  }
+
+  worldSeedCopySuccess() {
+    this.snackBar.open('World seed copied to clipboard!', 'Close', {
       duration: 2000,
     });
   }

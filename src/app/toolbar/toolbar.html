@@ -3,8 +3,15 @@
   <span class="spacer"></span>
   <button
     matButton
+    cdkCopyToClipboard="5067414480335961877"
+    (cdkCopyToClipboardCopied)="worldSeedCopySuccess()"
+  >
+    <mat-icon>content_copy</mat-icon>World Seed
+  </button>
+  <button
+    matButton
     cdkCopyToClipboard="51.79.11.172:25599"
-    (cdkCopyToClipboardCopied)="copySuccess()"
+    (cdkCopyToClipboardCopied)="serverIpCopySuccess()"
   >
     <mat-icon>content_copy</mat-icon>Server IP
   </button>
